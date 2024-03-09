@@ -36,13 +36,14 @@ def gcd(a: int, b: int) -> int:
     >>> gcd(3, 7)
     1
     """
-    # PUT YOUR CODE HERE
-    pass
+    while b:
+        a, b = b, a % b
+    return a
 
 
 def multiplicative_inverse(e: int, phi: int) -> int:
     """
-    Euclid's extended algorithm for finding the multiplicative
+    Euclid's extended algorithm for finding the multiplicativeyfb
     inverse of two numbers.
 
     >>> multiplicative_inverse(7, 40)
